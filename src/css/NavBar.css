@@ -1,0 +1,35 @@
+#navbar {
+  display: table;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(38, 45, 56);
+}
+
+.logo {
+  display: table-cell;
+  color: white;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.navContent {
+  display: table-cell;
+  text-align: right;
+  color: white;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.navContent ul {
+  list-style: none;
+  margin: 0
+}
+
+.navContent ul li {
+  display: inline-block;
+  padding: 0 20px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+.img-with-text {
+  text-align: center;
+  width: 204px;
+  border: 2px solid white;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.img-with-text p {
+  color: black;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}

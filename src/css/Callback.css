@@ -1,0 +1,25 @@
+.callbackForm {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+input {
+  width: 180px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.floatCenter {
+  text-align: center;
+  border: 3px solid white;
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  width: 206px;
+}

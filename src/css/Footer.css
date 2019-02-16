@@ -1,0 +1,13 @@
+#footer {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(38, 45, 56);
+  color: rgb(215, 65, 89);
+  clear: both;
+  position: relative;
+  margin-top: -100px;
+}
+
+li {
+  list-style: none;
+}
