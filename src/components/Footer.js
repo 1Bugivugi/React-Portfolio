@@ -9,15 +9,30 @@ class Footer extends Component {
       <div id='footer' className='p-3'>
         <Container>
           <Row>
-            <Col xs={4} md={4}>
-            <ul>
-              <li>
-                Favorite Food: <FontAwesomeIcon icon='igloo' />
-              </li>
-            </ul>
+            <Col xs={3} md={1}>
+              <ul>
+                <li>
+                  <a href='https://github.com/'><FontAwesomeIcon icon={['fab', 'github']} size='lg'/></a>
+                </li>
+              </ul>
+            </Col>
+            <Col xs={3} md={1}>
+              <ul>
+                <li>
+                  <a href='https://www.linkedin.com/'><FontAwesomeIcon icon={['fab', 'linkedin']} size='lg'/></a>
+                </li>
+              </ul>
+            </Col>
+            <Col xs={3} md={1}>
+              <ul>
+                <li>
+                  <a href='https://twitter.com/'><FontAwesomeIcon icon={['fab', 'twitter']} size='lg'/></a>
+                </li>
+              </ul>
             </Col>
           </Row>
         </Container>
+        <div className='copyright'><a>© 2019 Gleb Rezoun</a></div>
       </div>
     )
   }
