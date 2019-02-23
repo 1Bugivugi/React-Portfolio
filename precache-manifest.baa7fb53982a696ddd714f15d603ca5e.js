@@ -4,10 +4,6 @@ self.__precacheManifest = [
     "url": "/React-Portfolio/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "e2c2b3c2ebfbb6ceca1f3087ad9adc5f",
-    "url": "/React-Portfolio/static/media/landscape2.e2c2b3c2.jpg"
-  },
-  {
     "revision": "08df8c98356f61dfc9f966325e62f03f",
     "url": "/React-Portfolio/static/media/landscape1.08df8c98.jpg"
   },
@@ -20,19 +16,19 @@ self.__precacheManifest = [
     "url": "/React-Portfolio/static/js/runtime~main.804d233a.js"
   },
   {
-    "revision": "3671ca97e99fd29c27ac",
-    "url": "/React-Portfolio/static/js/main.3671ca97.chunk.js"
+    "revision": "eaad5b36a3ff1b94f0b6",
+    "url": "/React-Portfolio/static/js/main.eaad5b36.chunk.js"
   },
   {
-    "revision": "eef650e76798e60edc96",
-    "url": "/React-Portfolio/static/js/1.eef650e7.chunk.js"
+    "revision": "aa5794f354d7306c1c57",
+    "url": "/React-Portfolio/static/js/1.aa5794f3.chunk.js"
   },
   {
-    "revision": "3671ca97e99fd29c27ac",
-    "url": "/React-Portfolio/static/css/main.bbf6b6f4.chunk.css"
+    "revision": "eaad5b36a3ff1b94f0b6",
+    "url": "/React-Portfolio/static/css/main.9a06e117.chunk.css"
   },
   {
-    "revision": "9ae61ea51526cd4ca588266a4e73139e",
+    "revision": "ba324b94e6af9beab98412731c15e245",
     "url": "/React-Portfolio/index.html"
   }
 ];
