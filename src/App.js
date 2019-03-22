@@ -6,12 +6,14 @@ import Typed from 'typed.js';
 import Footer from './components/Footer';
 import Project from './components/Project';
 import Callback from './components/Callback';
+import About from './components/About';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
+import axios from 'axios';
 
 library.add(faAngleDoubleDown, faGithub, faTwitter, faLinkedin, faAngleDoubleUp);
 
@@ -22,6 +24,8 @@ class App extends Component {
 
     this.state = {
       open: false,
+      firstList: [],
+      secondList: []
     };
   }
 
@@ -35,6 +39,8 @@ class App extends Component {
       backDelay: 2000
     }
     let typed = new Typed(".typed", options);
+    this.getFirstList();
+    this.getSecondList();
   }
 
   changeButton = () => {
@@ -49,6 +55,28 @@ class App extends Component {
       }
     }
 
+    getFirstList = () => {
+      axios.get('gitProj1.json')
+        .then((response) => {
+          // console.log(response.data)
+         //  this.setState(() => {
+         //    return { list: response }
+         // })
+         this.setState({ firstList: response.data })
+        })
+    }
+
+    getSecondList = () => {
+      axios.get('gitProj2.json')
+        .then((response) => {
+          // console.log(response.data)
+         //  this.setState(() => {
+         //    return { list: response }
+         // })
+         this.setState({ secondList: response.data })
+        })
+    }
+
   render() {
     const { open } = this.state;
     return (
@@ -56,39 +84,59 @@ class App extends Component {
         <div id='container'>
           <main>
             <header>
-              <NavBar />
             </header>
-              <a name='about'></a>
-              <div className='parallax'>
-                <div className='centered'>
-                  <h1>Billy Herington</h1>
-                  <hr/>
-                  <span className='typed'></span>
-                </div>
+            <div className='parallax'>
+            </div>
+            <div className='centered'>
+              <h1>Who is this guy?</h1>
+              <hr/>
+              <span className='typed'></span>
+            </div>
+            <div>
+            <div>
+              <NavBar />
+            </div>
+              <div className='aboutSection'>
+                <a name='about' className='about'></a>
+                <About />
               </div>
-            <div className='projectsSection'>
-              <span className='prHeader'><a name='proj'></a>Some of my latest work</span>
-              <section className='projects'>
-                <Project />
-                <Project />
-                <Project />
+              <div className='projectsSection'>
+                <a name='proj' className='proj'></a>
+                <span className='prHeader'>Some of my latest work</span>
+                <section className='projects'>
+                  {
+                    this.state.firstList
+                      .map((response) => {
+                          return <Project
+                            gitList = {response}
+                            key = {response.id}
+                          />
+                      })
+                  }
                   <Collapse in={this.state.open}>
                     <div className='projects2'>
-                      <Project />
-                      <Project />
-                      <Project />
+                    {
+                      this.state.secondList
+                        .map((response) => {
+                            return <Project
+                              gitList = {response}
+                              key = {response.id}
+                            />
+                        })
+                    }
                     </div>
                   </Collapse>
-              </section>
-              <div>
-                <Button
-                variant='white'
-                onClick={() => this.setState({ open: !open  })}
-                aria-controls="example-collapse-text"
-                aria-expanded={open}
-                >
-                  { this.changeButton() }
-                </Button>
+                </section>
+                <div className='expandBtn'>
+                  <Button
+                  variant='white'
+                  onClick={() => this.setState({ open: !open  })}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open}
+                  >
+                    { this.changeButton() }
+                  </Button>
+                </div>
               </div>
             </div>
             <div className='parallax2'>

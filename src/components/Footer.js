@@ -9,26 +9,14 @@ class Footer extends Component {
       <div id='footer' className='p-3'>
         <Container>
           <Row>
-            <Col xs={3} md={1}>
-              <ul>
-                <li>
-                  <a href='https://github.com/'><FontAwesomeIcon icon={['fab', 'github']} size='lg'/></a>
-                </li>
-              </ul>
+            <Col xs={1}>
+              <a href='https://github.com/'><FontAwesomeIcon icon={['fab', 'github']} size='lg'/></a>
             </Col>
-            <Col xs={3} md={1}>
-              <ul>
-                <li>
-                  <a href='https://www.linkedin.com/'><FontAwesomeIcon icon={['fab', 'linkedin']} size='lg'/></a>
-                </li>
-              </ul>
+            <Col xs={1}>
+              <a href='https://www.linkedin.com/'><FontAwesomeIcon icon={['fab', 'linkedin']} size='lg'/></a>
             </Col>
-            <Col xs={3} md={1}>
-              <ul>
-                <li>
-                  <a href='https://twitter.com/'><FontAwesomeIcon icon={['fab', 'twitter']} size='lg'/></a>
-                </li>
-              </ul>
+            <Col xs={1}>
+              <a href='https://twitter.com/'><FontAwesomeIcon icon={['fab', 'twitter']} size='lg'/></a>
             </Col>
           </Row>
         </Container>

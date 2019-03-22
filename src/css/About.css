@@ -1,0 +1,17 @@
+.aboutHeader {
+  font-weight: 500;
+  font-size: 2em;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nameMe {
+  /* margin-top: 10px; */
+}
+
+.bio {
+  color: white;
+  margin: 40px auto;
+  width: 75%;
+}

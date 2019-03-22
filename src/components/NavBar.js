@@ -4,11 +4,33 @@ import logo from '../img/headerIcon.png';
 
 class NavBar extends Component {
 
+  constructor(props) {
+    super(props);
 
+    this.state = {};
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll(event) {
+    this.setState({scroll: window.scrollY});
+  };
+
+  componentDidMount() {
+    const el = document.querySelector('#navbar');
+
+    this.setState({top: el.offsetTop, height: el.offsetHeight});
+    window.addEventListener('scroll', this.handleScroll);
+  };
+
+  componentDidUpdate() {
+    this.state.scroll > this.state.top ? document.body.style.paddingTop =
+    `${this.state.height}px` : document.body.style.paddingTop = 0;
+  }
 
   render() {
     return(
-      <div id='navbar'>
+      <div id='navbar' className={this.state.scroll > this.state.top ? "sticky" : ""}>
         <div className='logo'><img src={logo}/></div>
         <div className='navContent'>
           <ul>
